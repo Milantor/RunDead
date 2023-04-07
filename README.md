@@ -1,4 +1,4 @@
-# RunDed
+# RunDead
 #action #shooter #platformer #2D #PixelArt  #horror #sandbox #RPG #Multiplayer
 игра совмещающая в себе шутер , рпг и многие другие жанры , с динамичным геймплеем и высокой вертикальностью , в сеттинге самосборного советского союза , игра разрабатывается как проект для повышения опыта разработки и изменяется по мере развития навыков . возможно проект однажды окупиться . помолимся за это ……
 дизайн документ игры https://docs.google.com/document/d/1KOehJ5CAmkiVnGZ-P0diJJpziUDGRz2OPPmKOHJ4j90/edit?usp=sharing
