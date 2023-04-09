@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 
 public class Entity
 {
@@ -7,16 +6,16 @@ public class Entity
 	private static Entity[] allEntities;
 	public int ID { get; private set; }
 
-	public int maxHealthPoint;
+	public readonly int maxHealthPoint;
 	private int healthPoint;
 	public int HealthPoint
 	{
 		get => healthPoint;
 		private set => healthPoint = value > maxHealthPoint ? maxHealthPoint : value;
 	}
-	public int ChangeHp(int data)
+	public int ChangeHp(int value)
 	{
-		HealthPoint += data;
+		HealthPoint += value;
 		return HealthPoint;
 	}
 
@@ -35,6 +34,11 @@ public class Entity
 			if (entity.ID == id) return entity;
 		}
 		throw new IndexOutOfRangeException(nameof(id));
+	}
+
+	public virtual void Death()
+	{
+		
 	}
 	
 	public virtual void Debug()
