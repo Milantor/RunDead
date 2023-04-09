@@ -10,6 +10,6 @@ public class Player : Entity
 
 	public override void Debug()
 	{
-		UnityEngine.Debug.Log($"Player:{nickname}, ID:{ID} \nHP:{HealthPoint}/{maxHealthPoint} ");
+		UnityEngine.Debug.Log($"Player:{nickname}, id:{id} \nHP:{HealthPoint}/{maxHealthPoint} ");
 	}
 }

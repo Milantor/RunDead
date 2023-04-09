@@ -2,9 +2,9 @@ using System;
 
 public class Entity
 {
-	private static int globalID;
+	private static int globalId;
 	private static Entity[] allEntities;
-	public int ID { get; private set; }
+	public int id { get; private set; }
 
 	public readonly int maxHealthPoint;
 	private int healthPoint;
@@ -21,7 +21,7 @@ public class Entity
 
 	protected Entity(int maxHP)
 	{
-		ID = globalID++;
+		id = globalId++;
 		maxHealthPoint = maxHP;
 		HealthPoint = maxHealthPoint;
 	}
@@ -31,7 +31,7 @@ public class Entity
 		if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
 		foreach (var entity in allEntities)
 		{
-			if (entity.ID == id) return entity;
+			if (entity.id == id) return entity;
 		}
 		throw new IndexOutOfRangeException(nameof(id));
 	}
@@ -43,6 +43,6 @@ public class Entity
 	
 	public virtual void Debug()
 	{
-		UnityEngine.Debug.Log($"ID:{ID} \nHP:{HealthPoint}/{maxHealthPoint} ");
+		UnityEngine.Debug.Log($"id:{id} \nHP:{HealthPoint}/{maxHealthPoint} ");
 	}
 }
