@@ -1,6 +1,6 @@
 using System;
 
-public class Entity
+public abstract class Entity
 {
 	private static int globalID;
 	private static Entity[] allEntities;
