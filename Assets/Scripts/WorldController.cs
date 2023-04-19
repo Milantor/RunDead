@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,6 +9,7 @@ public class WorldController : MonoBehaviour
 	public static WorldController _instance { get; private set; }
 	public Dictionary<string, Sprite> sprites { get; private set; }
 	public Dictionary<GameObject, Player> players = new();
+	public Dictionary<string, ItemPreset> itemPresets = new ();
 	public Action callback;
 
 	private void Awake()

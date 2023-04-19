@@ -1,13 +1,20 @@
-using System.Xml.Serialization;
+using UnityEditor;
 
 public abstract class Item
 {
 	protected static int globalId;
 	private int uniqueId;
-	[XmlAttribute("id")]
 	public string id { get; private set; }
 	public decimal weight;
 
+	protected Item(string id)
+	{
+		uniqueId = globalId++;
+		ItemPreset preset = WorldController._instance.itemPresets[id];
+		this.id = id;
+		this.weight = preset.weight;
+	}
+	
 	protected Item(string id, decimal weight)
 	{
 		uniqueId = globalId++;
