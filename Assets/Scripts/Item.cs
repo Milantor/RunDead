@@ -3,7 +3,7 @@ using UnityEditor;
 public abstract class Item
 {
 	protected static int globalId;
-	private int uniqueId;
+	public int uniqueId { get; private set; }
 	public string id { get; private set; }
 	public decimal weight;
 
@@ -14,7 +14,7 @@ public abstract class Item
 		this.id = id;
 		this.weight = preset.weight;
 	}
-	
+
 	protected Item(string id, decimal weight)
 	{
 		uniqueId = globalId++;
