@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<items>
-    <item id="apple">
-        <weight>0.2</weight>
-    </item>
-    <item id="potato">
-        <weight>0.05</weight>
-    </item>
-</items>
